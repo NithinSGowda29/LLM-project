@@ -16,7 +16,7 @@ import pandas as pd
 import sqlite3
 openai_api_key = os.environ.get("OPENAI_API_KEY")
 
-logo = "Logo_Light_Blue_(1).jpg"  # Replace with the actual file name of your logo
+#logo = "Logo_Light_Blue_(1).jpg"  # Replace with the actual file name of your logo
 
 # Set app configuration
 st.set_page_config(layout="wide", page_icon=":guardsman:", page_title="SQL Query Engine")
@@ -103,16 +103,16 @@ st.markdown(
     unsafe_allow_html=True,
 )
 
-logo_path = os.path.join(os.path.dirname(__file__), "Logo_Light_Blue_(2)_processed.jpg")
+#logo_path = os.path.join(os.path.dirname(__file__), "Logo_Light_Blue_(2)_processed.jpg")
 
 # Add a navigation bar
 st.markdown(
     f"""
     <div class="navbar">
         <div class="navbar-logo-container">
-            <img src="data:image/jpeg;base64,{base64.b64encode(open(logo_path, 'rb').read()).decode()}" width="100">
+            #<img src="data:image/jpeg;base64,{base64.b64encode(open(logo_path, 'rb').read()).decode()}" width="100">
         </div>
-        <h2 class="navbar-title">AIOC Guardian</h2>
+        <h2 class="navbar-title">SQL Query Engine</h2>
     </div>
     """,
     unsafe_allow_html=True,
