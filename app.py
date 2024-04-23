@@ -16,10 +16,10 @@ import pandas as pd
 import sqlite3
 openai_api_key = os.environ.get("OPENAI_API_KEY")
 
-ccc_logo = "CCC_Logo_Light_Blue_(1).jpg"  # Replace with the actual file name of your logo
+logo = "Logo_Light_Blue_(1).jpg"  # Replace with the actual file name of your logo
 
 # Set app configuration
-st.set_page_config(layout="wide", page_icon=":guardsman:", page_title="AIOC Guardian")
+st.set_page_config(layout="wide", page_icon=":guardsman:", page_title="SQL Query Engine")
 
 # Add custom CSS styles
 # Add custom CSS styles
@@ -103,14 +103,14 @@ st.markdown(
     unsafe_allow_html=True,
 )
 
-ccc_logo_path = os.path.join(os.path.dirname(__file__), "CCC_Logo_Light_Blue_(2)_processed.jpg")
+logo_path = os.path.join(os.path.dirname(__file__), "Logo_Light_Blue_(2)_processed.jpg")
 
 # Add a navigation bar
 st.markdown(
     f"""
     <div class="navbar">
         <div class="navbar-logo-container">
-            <img src="data:image/jpeg;base64,{base64.b64encode(open(ccc_logo_path, 'rb').read()).decode()}" width="100">
+            <img src="data:image/jpeg;base64,{base64.b64encode(open(logo_path, 'rb').read()).decode()}" width="100">
         </div>
         <h2 class="navbar-title">AIOC Guardian</h2>
     </div>
@@ -265,11 +265,11 @@ data_validation_prompt = """**Data Validation Instructions:**
 * Before executing the query, ensure that the referenced data likely exists in the database.
 * If potential issues are detected, indicate the problem and suggest alternatives instead of executing the query.
 
-Question: What is the volume of Model A in CCC company ?
+Question: What is the volume of Model A in ABC company ?
 SQL Query:    SELECT SUM(Daily_Volume) AS total_volume 
          FROM models 
-         WHERE lower(Model_Name) = 'model a' and lower(Company_Name) == 'ccc';
-    Answer: It seems there is no model named 'Model A' and no company called CCC in the database.  Can you please try with a different model and company name?
+         WHERE lower(Model_Name) = 'model a' and lower(Company_Name) == 'abc';
+    Answer: It seems there is no model named 'Model A' and no company called ABC in the database.  Can you please try with a different model and company name?
 """
 
 # Prompt to answer the questions
@@ -365,7 +365,7 @@ if generate_sql_button:
 st.markdown(
     """
     <div class="footer">
-        <p>&copy; 2024 CCC Information Services Inc. All rights reserved.</p>
+        <p>&copy; 2024 Information Services Inc. All rights reserved.</p>
     </div>
     """,
     unsafe_allow_html=True,
