@@ -110,7 +110,6 @@ st.markdown(
     f"""
     <div class="navbar">
         <div class="navbar-logo-container">
-            #<img src="data:image/jpeg;base64,{base64.b64encode(open(logo_path, 'rb').read()).decode()}" width="100">
         </div>
         <h2 class="navbar-title">SQL Query Engine</h2>
     </div>
