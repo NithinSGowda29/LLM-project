@@ -1,6 +1,6 @@
 # LLM-project
 ## Demo
-<img width="1423" alt="image" src="https://github.com/julio1185/IDS/assets/143755012/103d65d7-ffcf-47ac-9c41-2c3fb67f2a96">
+#<img width="1423" alt="image" src="https://github.com/julio1185/IDS/assets/143755012/103d65d7-ffcf-47ac-9c41-2c3fb67f2a96">
 
 ## Overview
 This project introduces a novel business analytics system using LangChain and OpenAI's GPT-4 to translate natural language into SQL queries. Our system integrates a semantic layer with GPT-4, enabling users without SQL expertise to interact with databases simply by asking questions in natural language. 
